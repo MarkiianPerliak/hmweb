@@ -8,11 +8,14 @@ function getdaContacts() {
     const li = document.createElement('li');
     li.classList.add('contact-card');
     li.innerHTML = `
-      <p><strong>${contact.firstName} ${contact.lastName}</strong></p>
+        <div class="divblock">
+            <p><strong>${contact.firstName} ${contact.lastName}</strong></p>
       <p>contact ${contact.phone}</p>
       <p>email ${contact.email}</p>
       <button class="buttonrename">Редагувати</button>
       <button class="buttonremove">Видалити</button>
+    </div>
+
     `;
 
     li.querySelector('.buttonremove').addEventListener('click', () => {
